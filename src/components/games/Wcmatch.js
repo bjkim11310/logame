@@ -57,7 +57,7 @@ export default class Wcmatch extends Component{
     render() {
         return (
             <div className="wcBoard">
-                <Link className="homeButton" to={ '/' } />
+                <Link className="homeButton" to={ '/' } refresh="true" />
                 <div className="score"><i class="fas fa-home"></i></div>
                 <div style={ wordStyle } className="word"></div>
                 <button style={ matchStyle } id="wcMatch" >Match</button>

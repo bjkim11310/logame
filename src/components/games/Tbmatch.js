@@ -86,7 +86,7 @@ export default class Tbmatch extends Component {
     render() {
         return (
             <div style={tbBoardStyle} className="tbBoard" >
-                <Link className="homeButton" to={ '/' } />
+                <Link className="homeButton" to={ '/' } refresh="true" />
                 <div className="score"><i class="fas fa-home"></i></div>
                 <div style={ canvasStyle } id="canvasContainer">
                     <div id="top"></div>

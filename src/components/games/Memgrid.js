@@ -99,7 +99,7 @@ export default class Memgrid extends Component{
     render() {
         return (
             <div className="mgBoard" >
-                <Link className="homeButton" to={ '/' } />
+                <Link className="homeButton" to={ '/' } refresh="true" />
                 <div className="score"></div>
                 <div className="cellContainer">
                 </div>
