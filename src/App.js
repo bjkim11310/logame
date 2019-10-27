@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import uuid from 'uuid';
-import Header from './components/layout/Header';
 import Score from './components/layout/Score';
 import Homepage from './components/layout/Homepage';
 import Memgrid from './components/games/Memgrid';
@@ -30,19 +29,21 @@ class App extends Component {
     ]
   }
 
+  refresh = ()=>{
+    setTimeout(()=>window.location.reload(), 0.1);
+  }
+
   render() {
-    window.location.reload();
     return (
       <Router>
         <div className="App">
           <div className="container">
-            <Header/>
-            <Route exact path="/" component={Homepage}>
+            <Route exact path="/" component={Homepage} >
               <div className="games"><Homepage games={this.state.games} /></div>
             </Route>
-            <Route path="/wcmatch" component={ Wcmatch } />
-            <Route path="/tbmatch" component={ Tbmatch } />
-            <Route path="/memgrid" component={ Memgrid } />
+            <Route path="/wcmatch" component={ Wcmatch } > <Wcmatch refresh={this.refresh} /> </Route>
+            <Route path="/tbmatch" component={ Tbmatch } > <Tbmatch refresh={this.refresh} /> </Route>
+            <Route path="/memgrid" component={ Memgrid } > <Memgrid refresh={this.refresh} /> </Route>
             <Route path="/score" component={ Score } />
           </div>
         </div>

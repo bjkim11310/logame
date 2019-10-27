@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 export default class Memgrid extends Component{
     componentDidMount() {
@@ -99,7 +100,7 @@ export default class Memgrid extends Component{
     render() {
         return (
             <div className="mgBoard" >
-                <Link className="homeButton" to={ '/' } refresh="true" />
+                <Link className="homeButton" to={ '/' } onClick={this.props.refresh} />
                 <div className="score"></div>
                 <div className="cellContainer">
                 </div>
@@ -109,4 +110,8 @@ export default class Memgrid extends Component{
             </div>
         )
     }
+}
+
+Memgrid.propTypes = {
+    refresh: PropTypes.func.isRequired
 }

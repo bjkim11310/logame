@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export default class Homepage extends Component {
     render() {
         return this.props.games.map(game => (
-            <Link className="link" style={ linkStyle } key={game.id} to={ '/'+game.abbrev }>{ game.name }</Link>
+            <Link className="link" style={ linkStyle } key={game.id} to={ '/'+game.abbrev } refresh={this.props.refresh} >{ game.name }</Link>
         ));
     }
 }

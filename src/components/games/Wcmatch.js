@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 export default class Wcmatch extends Component{
     componentDidMount() {
@@ -57,7 +58,7 @@ export default class Wcmatch extends Component{
     render() {
         return (
             <div className="wcBoard">
-                <Link className="homeButton" to={ '/' } refresh="true" />
+                <Link className="homeButton" to={ '/' } onClick={ this.props.refresh } />
                 <div className="score"><i class="fas fa-home"></i></div>
                 <div style={ wordStyle } className="word"></div>
                 <button style={ matchStyle } id="wcMatch" >Match</button>
@@ -97,4 +98,8 @@ const notMatchStyle = {
     background: '#d62929',
     fontSize: '250%',
     fontFamily: "'Josefin Sans', sans-serif"
+}
+
+Wcmatch.propTypes = {
+    refresh: PropTypes.func.isRequired
 }

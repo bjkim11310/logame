@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 export default class Tbmatch extends Component {
     componentDidMount() {
@@ -86,7 +87,7 @@ export default class Tbmatch extends Component {
     render() {
         return (
             <div style={tbBoardStyle} className="tbBoard" >
-                <Link className="homeButton" to={ '/' } refresh="true" />
+                <Link className="homeButton" to={ '/' } onClick={ this.props.refresh } />
                 <div className="score"><i class="fas fa-home"></i></div>
                 <div style={ canvasStyle } id="canvasContainer">
                     <div id="top"></div>
@@ -117,4 +118,8 @@ const canvasStyle = {
     height: "66vh",
     display: "flex",
     flexDirection: "column"
+}
+
+Tbmatch.propTypes = {
+    refresh: PropTypes.func.isRequired
 }
