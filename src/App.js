@@ -31,6 +31,7 @@ class App extends Component {
   }
 
   render() {
+    window.location.reload();
     return (
       <Router>
         <div className="App">
