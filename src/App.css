@@ -1,22 +1,93 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
+.games {
+    display: flex;
+    flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.games > a {
+    color: #fff;
+    background: #000;
+    transition: all 0.6s;
 }
 
-.App-link {
-  color: #09d3ac;
+.games > a:first-child {
+    margin-bottom: 1px;
+}
+
+.games > a:last-child {
+    margin-top: 1px;
+}
+
+.games > a:hover {
+    color: black;
+    background: white;
+    font-weight: bold;
+}
+
+.homeButton {
+    height: 50px;
+    width: 50px;
+    background: #fa0f9c;
+    border-radius: 14px;
+    top: 12px;
+    left: 12px;
+    position: absolute;
+}
+
+.score {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 250%;
+}
+
+#canvasContainer > div {
+    width: 100vw;
+    line-height: 33vh;
+    text-align: center;
+    background: #000;
+    font-size: 1250%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#tbButtonContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#tbButtonContainer > button {
+    width: calc(50vw - 1px);
+    line-height: calc(17vh - 1px);
+    text-align: center;
+    background: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 350%;
+    border: none;
+    margin: 1px 0.5px 0 0.5px;
+}
+
+.mgBoard {
+    background: #000;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+}
+
+.cellContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 120px;
+}
+
+.cellContainer > div {
+    width: calc(25vw - 1px);
+    height: 25vw;
+    margin: 0.5px;
 }
