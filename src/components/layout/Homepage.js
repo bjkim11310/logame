@@ -15,7 +15,7 @@ const linkStyle = {
     textDecoration: 'none',
     fontSize: '4.25vh',
     fontFamily: 'Courier New',
-    lineHeight: '33.2vh',
+    lineHeight: '33.1vh',
     textAlign: 'center'
 }
 
